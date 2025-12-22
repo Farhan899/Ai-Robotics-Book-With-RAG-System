@@ -1,0 +1,198 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * locally scoped CSS.
+ */
+
+.heroBanner {
+  padding: 6rem 0 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--ifm-color-emphasis-100) 0%, var(--ifm-background-color) 30%, var(--ifm-background-color) 70%, var(--ifm-color-emphasis-100) 100%);
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 4rem 0 2rem;
+    min-height: 60vh;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.hero__title {
+  display: none;
+}
+
+.hero__subtitle {
+  display: none;
+}
+
+.hero__value {
+  display: none;
+}
+
+.button--secondary {
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button--secondary:hover {
+  background-color: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-dark);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button--secondary:active {
+  transform: translateY(0);
+}
+
+/* Additional components styles */
+.architectureSection {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-color);
+  border-top: 1px solid var(--ifm-toc-border-color);
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
+.audienceSection {
+  padding: 4rem 0;
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.buildSection {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-color);
+}
+
+.navSection {
+  padding: 4rem 0;
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-heading-color);
+  text-align: center;
+}
+
+.iconCircle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.outcomeList {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.outcomeList li {
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.buildNote {
+  font-style: italic;
+  color: var(--ifm-color-emphasis-600);
+  text-align: center;
+}
+
+.navLink {
+  display: block;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: var(--ifm-background-color);
+  border: 1px solid var(--ifm-toc-border-color);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.navLink:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.hero__value {
+  font-size: 1.2rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Dark mode specific styles */
+html[data-theme='dark'] .heroBanner {
+  background: linear-gradient(135deg, var(--ifm-color-emphasis-200) 0%, var(--ifm-background-color) 30%, var(--ifm-background-color) 70%, var(--ifm-color-emphasis-200) 100%);
+}
+
+html[data-theme='dark'] .hero__title {
+  color: white !important;
+}
+
+html[data-theme='dark'] .hero__subtitle {
+  color: var(--ifm-color-emphasis-400);
+}
+
+html[data-theme='dark'] .button--secondary {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme='dark'] .button--secondary:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme='dark'] .audienceSection {
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+html[data-theme='dark'] .navSection {
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+html[data-theme='dark'] .navLink {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+html[data-theme='dark'] .hero__value {
+  color: var(--ifm-color-emphasis-600);
+}
