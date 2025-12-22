@@ -1,0 +1,190 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "capstone/architecture",
+              "path": "/docs/capstone/architecture",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "capstone/code-examples",
+              "path": "/docs/capstone/code-examples",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "capstone/hands-on",
+              "path": "/docs/capstone/hands-on",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "capstone/index",
+              "path": "/docs/capstone/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "capstone/troubleshooting",
+              "path": "/docs/capstone/troubleshooting",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1-ros2/architecture",
+              "path": "/docs/module-1-ros2/architecture",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1-ros2/code-examples",
+              "path": "/docs/module-1-ros2/code-examples",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1-ros2/hands-on",
+              "path": "/docs/module-1-ros2/hands-on",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1-ros2/index",
+              "path": "/docs/module-1-ros2/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1-ros2/troubleshooting",
+              "path": "/docs/module-1-ros2/troubleshooting",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2-digital-twin/architecture",
+              "path": "/docs/module-2-digital-twin/architecture",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2-digital-twin/code-examples",
+              "path": "/docs/module-2-digital-twin/code-examples",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2-digital-twin/hands-on",
+              "path": "/docs/module-2-digital-twin/hands-on",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2-digital-twin/index",
+              "path": "/docs/module-2-digital-twin/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2-digital-twin/troubleshooting",
+              "path": "/docs/module-2-digital-twin/troubleshooting",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3-ai-robot-brain/architecture",
+              "path": "/docs/module-3-ai-robot-brain/architecture",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3-ai-robot-brain/code-examples",
+              "path": "/docs/module-3-ai-robot-brain/code-examples",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3-ai-robot-brain/hands-on",
+              "path": "/docs/module-3-ai-robot-brain/hands-on",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3-ai-robot-brain/index",
+              "path": "/docs/module-3-ai-robot-brain/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3-ai-robot-brain/troubleshooting",
+              "path": "/docs/module-3-ai-robot-brain/troubleshooting",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-4-vla/architecture",
+              "path": "/docs/module-4-vla/architecture",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-4-vla/code-examples",
+              "path": "/docs/module-4-vla/code-examples",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-4-vla/hands-on",
+              "path": "/docs/module-4-vla/hands-on",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-4-vla/index",
+              "path": "/docs/module-4-vla/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-4-vla/troubleshooting",
+              "path": "/docs/module-4-vla/troubleshooting",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-basics/congratulations",
+              "path": "/docs/tutorial-basics/congratulations"
+            },
+            {
+              "id": "tutorial-basics/create-a-blog-post",
+              "path": "/docs/tutorial-basics/create-a-blog-post"
+            },
+            {
+              "id": "tutorial-basics/create-a-document",
+              "path": "/docs/tutorial-basics/create-a-document"
+            },
+            {
+              "id": "tutorial-basics/create-a-page",
+              "path": "/docs/tutorial-basics/create-a-page"
+            },
+            {
+              "id": "tutorial-basics/deploy-your-site",
+              "path": "/docs/tutorial-basics/deploy-your-site"
+            },
+            {
+              "id": "tutorial-basics/markdown-features",
+              "path": "/docs/tutorial-basics/markdown-features"
+            },
+            {
+              "id": "tutorial-extras/manage-docs-versions",
+              "path": "/docs/tutorial-extras/manage-docs-versions"
+            },
+            {
+              "id": "tutorial-extras/translate-your-site",
+              "path": "/docs/tutorial-extras/translate-your-site"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/intro",
+                "label": "Introduction"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

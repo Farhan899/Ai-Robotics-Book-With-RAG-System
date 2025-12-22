@@ -1,0 +1,27 @@
+{
+  "id": "module-3-ai-robot-brain/index",
+  "title": "Module 3: The AI-Robot Brain (NVIDIA Isaac™)",
+  "description": "Overview",
+  "source": "@site/docs/module-3-ai-robot-brain/index.md",
+  "sourceDirName": "module-3-ai-robot-brain",
+  "slug": "/module-3-ai-robot-brain/",
+  "permalink": "/docs/module-3-ai-robot-brain/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/module-3-ai-robot-brain/index.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Troubleshooting: Digital Twin and Simulation Common Issues",
+    "permalink": "/docs/module-2-digital-twin/troubleshooting"
+  },
+  "next": {
+    "title": "NVIDIA Isaac Sim Architecture",
+    "permalink": "/docs/module-3-ai-robot-brain/architecture"
+  }
+}

@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-module-1-ros2/troubleshooting" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Troubleshooting: ROS 2 Common Issues | AI / Spec-Driven Humanoid Robotics</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://your-robotics-book.example.com/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://your-robotics-book.example.com/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://your-robotics-book.example.com/docs/module-1-ros2/troubleshooting"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Troubleshooting: ROS 2 Common Issues | AI / Spec-Driven Humanoid Robotics"><meta data-rh="true" name="description" content="Common Installation and Setup Issues"><meta data-rh="true" property="og:description" content="Common Installation and Setup Issues"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-robotics-book.example.com/docs/module-1-ros2/troubleshooting"><link data-rh="true" rel="alternate" href="https://your-robotics-book.example.com/docs/module-1-ros2/troubleshooting" hreflang="en"><link data-rh="true" rel="alternate" href="https://your-robotics-book.example.com/docs/module-1-ros2/troubleshooting" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Troubleshooting: ROS 2 Common Issues","item":"https://your-robotics-book.example.com/docs/module-1-ros2/troubleshooting"}]}</script><link rel="stylesheet" href="/assets/css/styles.efeec1c5.css">
+<script src="/assets/js/runtime~main.5cc68559.js" defer="defer"></script>
+<script src="/assets/js/main.c417a746.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="AI Robotics Book Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="AI Robotics Book Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">AI / Spec-Driven Humanoid Robotics</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/intro">Book</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/Farhan899/Ai-Robotics-Book" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/docs/intro"><span title="Introduction" class="categoryLinkLabel_W154">Introduction</span></a><button aria-label="Expand sidebar category &#x27;Introduction&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/module-1-ros2/"><span title="Module 1: The Robotic Nervous System (ROS 2)" class="categoryLinkLabel_W154">Module 1: The Robotic Nervous System (ROS 2)</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/module-1-ros2/"><span title="Module 1: The Robotic Nervous System (ROS 2)" class="linkLabel_WmDU">Module 1: The Robotic Nervous System (ROS 2)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/module-1-ros2/architecture"><span title="ROS 2 Architecture and DDS Middleware" class="linkLabel_WmDU">ROS 2 Architecture and DDS Middleware</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/module-1-ros2/hands-on"><span title="Hands-On: ROS 2 Nodes, Topics, Services, and Actions" class="linkLabel_WmDU">Hands-On: ROS 2 Nodes, Topics, Services, and Actions</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/module-1-ros2/code-examples"><span title="Code Examples: ROS 2 with rclpy and URDF" class="linkLabel_WmDU">Code Examples: ROS 2 with rclpy and URDF</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/module-1-ros2/troubleshooting"><span title="Troubleshooting: ROS 2 Common Issues" class="linkLabel_WmDU">Troubleshooting: ROS 2 Common Issues</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/module-2-digital-twin/"><span title="Module 2: The Digital Twin (Gazebo &amp; Unity)" class="categoryLinkLabel_W154">Module 2: The Digital Twin (Gazebo &amp; Unity)</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/module-3-ai-robot-brain/"><span title="Module 3: The AI-Robot Brain (NVIDIA Isaac™)" class="categoryLinkLabel_W154">Module 3: The AI-Robot Brain (NVIDIA Isaac™)</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/module-4-vla/"><span title="Module 4: Vision-Language-Action (VLA)" class="categoryLinkLabel_W154">Module 4: Vision-Language-Action (VLA)</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/capstone/"><span title="Capstone Project: The Autonomous Humanoid" class="categoryLinkLabel_W154">Capstone Project: The Autonomous Humanoid</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Module 1: The Robotic Nervous System (ROS 2)</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Troubleshooting: ROS 2 Common Issues</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Troubleshooting: ROS 2 Common Issues</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="common-installation-and-setup-issues">Common Installation and Setup Issues<a href="#common-installation-and-setup-issues" class="hash-link" aria-label="Direct link to Common Installation and Setup Issues" title="Direct link to Common Installation and Setup Issues" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ros-2-installation-problems">ROS 2 Installation Problems<a href="#ros-2-installation-problems" class="hash-link" aria-label="Direct link to ROS 2 Installation Problems" title="Direct link to ROS 2 Installation Problems" translate="no">​</a></h3>
+<p><strong>Issue</strong>: Cannot source ROS 2 setup files</p>
+<ul>
+<li class=""><strong>Symptoms</strong>: <code>source /opt/ros/humble/setup.bash</code> returns &quot;No such file or directory&quot;</li>
+<li class=""><strong>Solutions</strong>:<!-- -->
+<ol>
+<li class="">Verify ROS 2 Humble is installed: <code>ls /opt/ros/</code></li>
+<li class="">Check correct ROS 2 distribution is installed (Humble Hawksbill for this book)</li>
+<li class="">If using a different distribution, adjust the path accordingly (e.g., <code>/opt/ros/iron/</code>)</li>
+</ol>
+</li>
+</ul>
+<p><strong>Issue</strong>: Python modules not found</p>
+<ul>
+<li class=""><strong>Symptoms</strong>: <code>ImportError: No module named &#x27;rclpy&#x27;</code></li>
+<li class=""><strong>Solutions</strong>:<!-- -->
+<ol>
+<li class="">Ensure ROS 2 environment is sourced: <code>source /opt/ros/humble/setup.bash</code></li>
+<li class="">Check if Python packages are in the correct path: <code>echo $PYTHONPATH</code></li>
+<li class="">Install Python dependencies: <code>sudo apt install python3-colcon-common-extensions</code></li>
+</ol>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="network-and-communication-issues">Network and Communication Issues<a href="#network-and-communication-issues" class="hash-link" aria-label="Direct link to Network and Communication Issues" title="Direct link to Network and Communication Issues" translate="no">​</a></h3>
+<p><strong>Issue</strong>: Nodes cannot communicate across machines</p>
+<ul>
+<li class=""><strong>Symptoms</strong>: Publishers and subscribers on different machines cannot see each other</li>
+<li class=""><strong>Solutions</strong>:<!-- -->
+<ol>
+<li class="">Ensure both machines are on the same network</li>
+<li class="">Check firewall settings (DDS uses ports 7400-7499 by default)</li>
+<li class="">Set ROS domain ID: <code>export ROS_DOMAIN_ID=42</code> (same on all machines)</li>
+<li class="">Verify network configuration: <code>echo $ROS_LOCALHOST_ONLY</code> (should be 0 or unset)</li>
+</ol>
+</li>
+</ul>
+<p><strong>Issue</strong>: QoS profile mismatch</p>
+<ul>
+<li class=""><strong>Symptoms</strong>: Publishers and subscribers not communicating despite correct topic names</li>
+<li class=""><strong>Solutions</strong>:<!-- -->
+<ol>
+<li class="">Ensure QoS profiles match between publishers and subscribers</li>
+<li class="">Use compatible QoS settings (RELIABLE with RELIABLE, not BEST_EFFORT)</li>
+<li class="">Check durability settings (TRANSIENT_LOCAL vs VOLATILE)</li>
+</ol>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="node-and-communication-issues">Node and Communication Issues<a href="#node-and-communication-issues" class="hash-link" aria-label="Direct link to Node and Communication Issues" title="Direct link to Node and Communication Issues" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="node-lifecycle-problems">Node Lifecycle Problems<a href="#node-lifecycle-problems" class="hash-link" aria-label="Direct link to Node Lifecycle Problems" title="Direct link to Node Lifecycle Problems" translate="no">​</a></h3>
+<p><strong>Issue</strong>: Node fails to initialize</p>
+<ul>
+<li class=""><strong>Symptoms</strong>: <code>rclpy.init()</code> fails or node constructor throws an exception</li>
+<li class=""><strong>Solutions</strong>:<!-- -->
+<ol>
+<li class="">Verify ROS 2 environment is sourced</li>
+<li class="">Check if another ROS 2 process is running that might conflict</li>
+<li class="">Ensure proper initialization: <code>rclpy.init(args=args)</code> before creating nodes</li>
+</ol>
+</li>
+</ul>
+<p><strong>Issue</strong>: Node doesn&#x27;t respond to Ctrl+C</p>
+<ul>
+<li class=""><strong>Symptoms</strong>: Node continues running after pressing Ctrl+C</li>
+<li class=""><strong>Solutions</strong>:<!-- -->
+<ol>
+<li class="">Ensure proper cleanup in main function:<!-- -->
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">try</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    rclpy</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">spin</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">node</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">except</span><span class="token plain"> KeyboardInterrupt</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">pass</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">finally</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    node</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">destroy_node</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    rclpy</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">shutdown</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><br></span></code></pre></div></div>
+</li>
+</ol>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="publisher-and-subscriber-issues">Publisher and Subscriber Issues<a href="#publisher-and-subscriber-issues" class="hash-link" aria-label="Direct link to Publisher and Subscriber Issues" title="Direct link to Publisher and Subscriber Issues" translate="no">​</a></h3>
+<p><strong>Issue</strong>: Publisher not sending messages</p>
+<ul>
+<li class=""><strong>Symptoms</strong>: No messages appear when using <code>ros2 topic echo</code></li>
+<li class=""><strong>Solutions</strong>:<!-- -->
+<ol>
+<li class="">Check if timer is properly created and running</li>
+<li class="">Verify publisher is created with correct topic name</li>
+<li class="">Ensure <code>rclpy.spin()</code> is called to process callbacks</li>
+</ol>
+</li>
+</ul>
+<p><strong>Issue</strong>: Subscriber not receiving messages</p>
+<ul>
+<li class=""><strong>Symptoms</strong>: Callback function never executes</li>
+<li class=""><strong>Solutions</strong>:<!-- -->
+<ol>
+<li class="">Verify topic names match exactly (case-sensitive)</li>
+<li class="">Check message types are compatible</li>
+<li class="">Ensure QoS profiles are compatible between publisher and subscriber</li>
+<li class="">Verify node is spinning: <code>rclpy.spin(node)</code></li>
+</ol>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="service-and-action-issues">Service and Action Issues<a href="#service-and-action-issues" class="hash-link" aria-label="Direct link to Service and Action Issues" title="Direct link to Service and Action Issues" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="service-communication-problems">Service Communication Problems<a href="#service-communication-problems" class="hash-link" aria-label="Direct link to Service Communication Problems" title="Direct link to Service Communication Problems" translate="no">​</a></h3>
+<p><strong>Issue</strong>: Service client times out waiting for service</p>
+<ul>
+<li class=""><strong>Symptoms</strong>: <code>while not self.cli.wait_for_service(timeout_sec=1.0):</code> loops indefinitely</li>
+<li class=""><strong>Solutions</strong>:<!-- -->
+<ol>
+<li class="">Verify service name matches exactly</li>
+<li class="">Ensure service server is running before client</li>
+<li class="">Check if service is advertised with correct type</li>
+</ol>
+</li>
+</ul>
+<p><strong>Issue</strong>: Service request fails</p>
+<ul>
+<li class=""><strong>Symptoms</strong>: Service call returns without response or throws exception</li>
+<li class=""><strong>Solutions</strong>:<!-- -->
+<ol>
+<li class="">Check service callback function returns the expected response type</li>
+<li class="">Verify request/response message types match</li>
+<li class="">Ensure service callback doesn&#x27;t throw exceptions</li>
+</ol>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="action-communication-problems">Action Communication Problems<a href="#action-communication-problems" class="hash-link" aria-label="Direct link to Action Communication Problems" title="Direct link to Action Communication Problems" translate="no">​</a></h3>
+<p><strong>Issue</strong>: Action client cannot connect to action server</p>
+<ul>
+<li class=""><strong>Symptoms</strong>: <code>self._action_client.wait_for_server()</code> times out</li>
+<li class=""><strong>Solutions</strong>:<!-- -->
+<ol>
+<li class="">Verify action name matches exactly</li>
+<li class="">Ensure action server is running before client</li>
+<li class="">Check action type matches between client and server</li>
+</ol>
+</li>
+</ul>
+<p><strong>Issue</strong>: Action goal execution fails</p>
+<ul>
+<li class=""><strong>Symptoms</strong>: Goal is rejected or fails without clear error</li>
+<li class=""><strong>Solutions</strong>:<!-- -->
+<ol>
+<li class="">Check action server properly handles goal requests</li>
+<li class="">Verify goal, feedback, and result message types</li>
+<li class="">Ensure action server calls appropriate callbacks (succeed, cancel, etc.)</li>
+</ol>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="urdf-and-robot-description-issues">URDF and Robot Description Issues<a href="#urdf-and-robot-description-issues" class="hash-link" aria-label="Direct link to URDF and Robot Description Issues" title="Direct link to URDF and Robot Description Issues" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="urdf-parsing-errors">URDF Parsing Errors<a href="#urdf-parsing-errors" class="hash-link" aria-label="Direct link to URDF Parsing Errors" title="Direct link to URDF Parsing Errors" translate="no">​</a></h3>
+<p><strong>Issue</strong>: Robot description fails to load</p>
+<ul>
+<li class=""><strong>Symptoms</strong>: Error messages about URDF parsing, robot not visible in RViz</li>
+<li class=""><strong>Solutions</strong>:<!-- -->
+<ol>
+<li class="">Validate XML syntax using an XML validator</li>
+<li class="">Check all joint and link names are unique</li>
+<li class="">Verify all parent-child relationships are valid</li>
+<li class="">Ensure all required elements are present (mass, inertia for links)</li>
+</ol>
+</li>
+</ul>
+<p><strong>Issue</strong>: Robot appears incorrectly in RViz</p>
+<ul>
+<li class=""><strong>Symptoms</strong>: Parts of robot are missing or positioned incorrectly</li>
+<li class=""><strong>Solutions</strong>:<!-- -->
+<ol>
+<li class="">Check origin transformations in joints</li>
+<li class="">Verify joint types and limits are correct</li>
+<li class="">Ensure visual and collision elements are properly defined</li>
+</ol>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="robot-state-publisher-issues">Robot State Publisher Issues<a href="#robot-state-publisher-issues" class="hash-link" aria-label="Direct link to Robot State Publisher Issues" title="Direct link to Robot State Publisher Issues" translate="no">​</a></h3>
+<p><strong>Issue</strong>: Joint states not updating in visualization</p>
+<ul>
+<li class=""><strong>Symptoms</strong>: Robot appears rigid or joints don&#x27;t move as expected</li>
+<li class=""><strong>Solutions</strong>:<!-- -->
+<ol>
+<li class="">Verify joint_state_publisher is running</li>
+<li class="">Check that joint states are published to <code>/joint_states</code> topic</li>
+<li class="">Ensure robot description parameter is correctly set in robot_state_publisher</li>
+</ol>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="performance-and-resource-issues">Performance and Resource Issues<a href="#performance-and-resource-issues" class="hash-link" aria-label="Direct link to Performance and Resource Issues" title="Direct link to Performance and Resource Issues" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="memory-and-cpu-usage">Memory and CPU Usage<a href="#memory-and-cpu-usage" class="hash-link" aria-label="Direct link to Memory and CPU Usage" title="Direct link to Memory and CPU Usage" translate="no">​</a></h3>
+<p><strong>Issue</strong>: High CPU usage</p>
+<ul>
+<li class=""><strong>Symptoms</strong>: System becomes slow, ROS 2 processes consume high CPU</li>
+<li class=""><strong>Solutions</strong>:<!-- -->
+<ol>
+<li class="">Check timer frequencies - avoid unnecessarily high rates</li>
+<li class="">Reduce message publishing frequency if possible</li>
+<li class="">Use appropriate QoS settings (BEST_EFFORT for non-critical data)</li>
+</ol>
+</li>
+</ul>
+<p><strong>Issue</strong>: Memory leaks</p>
+<ul>
+<li class=""><strong>Symptoms</strong>: Memory usage increases over time</li>
+<li class=""><strong>Solutions</strong>:<!-- -->
+<ol>
+<li class="">Properly destroy nodes: <code>node.destroy_node()</code></li>
+<li class="">Clean up subscriptions, publishers, and services when done</li>
+<li class="">Use context managers or try/finally blocks for cleanup</li>
+</ol>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="communication-performance">Communication Performance<a href="#communication-performance" class="hash-link" aria-label="Direct link to Communication Performance" title="Direct link to Communication Performance" translate="no">​</a></h3>
+<p><strong>Issue</strong>: Message delays or dropped messages</p>
+<ul>
+<li class=""><strong>Symptoms</strong>: High latency in communication, missing messages</li>
+<li class=""><strong>Solutions</strong>:<!-- -->
+<ol>
+<li class="">Check network performance between machines</li>
+<li class="">Adjust QoS settings (history depth, reliability)</li>
+<li class="">Monitor system resources for bottlenecks</li>
+</ol>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="debugging-strategies">Debugging Strategies<a href="#debugging-strategies" class="hash-link" aria-label="Direct link to Debugging Strategies" title="Direct link to Debugging Strategies" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="using-ros-2-command-line-tools">Using ROS 2 Command Line Tools<a href="#using-ros-2-command-line-tools" class="hash-link" aria-label="Direct link to Using ROS 2 Command Line Tools" title="Direct link to Using ROS 2 Command Line Tools" translate="no">​</a></h3>
+<p><strong>Check node connectivity</strong>:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># List all nodes</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ros2 node list</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Check node info</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ros2 node info &lt;node_name&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># List topics</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ros2 topic list</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Echo a topic</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ros2 topic echo &lt;topic_name&gt; &lt;message_type&gt;</span><br></span></code></pre></div></div>
+<p><strong>Check service and action status</strong>:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># List services</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ros2 service list</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Call a service</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ros2 service call &lt;service_name&gt; &lt;service_type&gt; &lt;request_data&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># List actions</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ros2 action list</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="logging-and-debugging">Logging and Debugging<a href="#logging-and-debugging" class="hash-link" aria-label="Direct link to Logging and Debugging" title="Direct link to Logging and Debugging" translate="no">​</a></h3>
+<p><strong>Enable detailed logging</strong>:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># Set log level</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">export RCUTILS_LOGGING_SEVERITY_THRESHOLD=DEBUG</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Or set for specific nodes</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">export RCUTILS_LOGGING_SEVERITY_THRESHOLD=INFO</span><br></span></code></pre></div></div>
+<p><strong>Use launch file debugging</strong>:</p>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Add logging to launch files</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">from</span><span class="token plain"> launch</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">actions </span><span class="token keyword" style="color:#00009f">import</span><span class="token plain"> LogInfo</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Example of debugging in launch file</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">LogInfo</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">msg</span><span class="token operator" style="color:#393A34">=</span><span class="token punctuation" style="color:#393A34">[</span><span class="token string" style="color:#e3116c">&#x27;Launching node: &#x27;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> launch_configuration_variable</span><span class="token punctuation" style="color:#393A34">]</span><span class="token punctuation" style="color:#393A34">)</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-concepts">Key Concepts<a href="#key-concepts" class="hash-link" aria-label="Direct link to Key Concepts" title="Direct link to Key Concepts" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>ROS_DOMAIN_ID</strong>: Environment variable to isolate ROS 2 networks</li>
+<li class=""><strong>QoS Compatibility</strong>: Publishers/subscribers need compatible QoS profiles</li>
+<li class=""><strong>Node Lifecycle</strong>: Proper initialization and cleanup is essential</li>
+<li class=""><strong>Message Types</strong>: Publishers and subscribers must use compatible message types</li>
+<li class=""><strong>URDF Validation</strong>: XML syntax and semantic correctness required</li>
+<li class=""><strong>Resource Management</strong>: Proper cleanup prevents memory leaks</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="practical-exercises">Practical Exercises<a href="#practical-exercises" class="hash-link" aria-label="Direct link to Practical Exercises" title="Direct link to Practical Exercises" translate="no">​</a></h2>
+<ol>
+<li class="">Create a diagnostic node that checks for common ROS 2 issues</li>
+<li class="">Implement a health monitoring system for your ROS 2 nodes</li>
+<li class="">Develop a debugging launch file with detailed logging</li>
+<li class="">Create a script that validates URDF files before loading</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="common-failure-modes">Common Failure Modes<a href="#common-failure-modes" class="hash-link" aria-label="Direct link to Common Failure Modes" title="Direct link to Common Failure Modes" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Environment Not Sourced</strong>: Forgetting to source ROS 2 setup files</li>
+<li class=""><strong>QoS Mismatch</strong>: Incompatible QoS profiles preventing communication</li>
+<li class=""><strong>Resource Leaks</strong>: Not properly destroying nodes or handles</li>
+<li class=""><strong>Network Configuration</strong>: Firewall or domain ID issues in multi-machine setups</li>
+<li class=""><strong>Message Type Errors</strong>: Incompatible message types between nodes</li>
+<li class=""><strong>Initialization Order</strong>: Starting clients before servers or actions</li>
+<li class=""><strong>URDF Syntax Errors</strong>: Malformed XML preventing robot description loading</li>
+<li class=""><strong>Timer Issues</strong>: Improper timer configuration causing performance problems</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-concepts-1">Key Concepts<a href="#key-concepts-1" class="hash-link" aria-label="Direct link to Key Concepts" title="Direct link to Key Concepts" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>ROS_DOMAIN_ID</strong>: Environment variable to isolate ROS 2 networks</li>
+<li class=""><strong>QoS Compatibility</strong>: Publishers/subscribers need compatible QoS profiles</li>
+<li class=""><strong>Node Lifecycle</strong>: Proper initialization and cleanup is essential</li>
+<li class=""><strong>Message Types</strong>: Publishers and subscribers must use compatible message types</li>
+<li class=""><strong>URDF Validation</strong>: XML syntax and semantic correctness required</li>
+<li class=""><strong>Resource Management</strong>: Proper cleanup prevents memory leaks</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="practical-exercises-1">Practical Exercises<a href="#practical-exercises-1" class="hash-link" aria-label="Direct link to Practical Exercises" title="Direct link to Practical Exercises" translate="no">​</a></h2>
+<ol>
+<li class="">Create a diagnostic node that checks for common ROS 2 issues</li>
+<li class="">Implement a health monitoring system for your ROS 2 nodes</li>
+<li class="">Develop a debugging launch file with detailed logging</li>
+<li class="">Create a script that validates URDF files before loading</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="common-failure-modes-continued">Common Failure Modes (Continued)<a href="#common-failure-modes-continued" class="hash-link" aria-label="Direct link to Common Failure Modes (Continued)" title="Direct link to Common Failure Modes (Continued)" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Environment Not Sourced</strong>: Forgetting to source ROS 2 setup files</li>
+<li class=""><strong>QoS Mismatch</strong>: Incompatible QoS profiles preventing communication</li>
+<li class=""><strong>Resource Leaks</strong>: Not properly destroying nodes or handles</li>
+<li class=""><strong>Network Configuration</strong>: Firewall or domain ID issues in multi-machine setups</li>
+<li class=""><strong>Message Type Errors</strong>: Incompatible message types between nodes</li>
+<li class=""><strong>Initialization Order</strong>: Starting clients before servers or actions</li>
+<li class=""><strong>URDF Syntax Errors</strong>: Malformed XML preventing robot description loading</li>
+<li class=""><strong>Timer Issues</strong>: Improper timer configuration causing performance problems</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/module-1-ros2/troubleshooting.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/module-1-ros2/code-examples"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Code Examples: ROS 2 with rclpy and URDF</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/module-2-digital-twin/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Module 2: The Digital Twin (Gazebo &amp; Unity)</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#common-installation-and-setup-issues" class="table-of-contents__link toc-highlight">Common Installation and Setup Issues</a><ul><li><a href="#ros-2-installation-problems" class="table-of-contents__link toc-highlight">ROS 2 Installation Problems</a></li><li><a href="#network-and-communication-issues" class="table-of-contents__link toc-highlight">Network and Communication Issues</a></li></ul></li><li><a href="#node-and-communication-issues" class="table-of-contents__link toc-highlight">Node and Communication Issues</a><ul><li><a href="#node-lifecycle-problems" class="table-of-contents__link toc-highlight">Node Lifecycle Problems</a></li><li><a href="#publisher-and-subscriber-issues" class="table-of-contents__link toc-highlight">Publisher and Subscriber Issues</a></li></ul></li><li><a href="#service-and-action-issues" class="table-of-contents__link toc-highlight">Service and Action Issues</a><ul><li><a href="#service-communication-problems" class="table-of-contents__link toc-highlight">Service Communication Problems</a></li><li><a href="#action-communication-problems" class="table-of-contents__link toc-highlight">Action Communication Problems</a></li></ul></li><li><a href="#urdf-and-robot-description-issues" class="table-of-contents__link toc-highlight">URDF and Robot Description Issues</a><ul><li><a href="#urdf-parsing-errors" class="table-of-contents__link toc-highlight">URDF Parsing Errors</a></li><li><a href="#robot-state-publisher-issues" class="table-of-contents__link toc-highlight">Robot State Publisher Issues</a></li></ul></li><li><a href="#performance-and-resource-issues" class="table-of-contents__link toc-highlight">Performance and Resource Issues</a><ul><li><a href="#memory-and-cpu-usage" class="table-of-contents__link toc-highlight">Memory and CPU Usage</a></li><li><a href="#communication-performance" class="table-of-contents__link toc-highlight">Communication Performance</a></li></ul></li><li><a href="#debugging-strategies" class="table-of-contents__link toc-highlight">Debugging Strategies</a><ul><li><a href="#using-ros-2-command-line-tools" class="table-of-contents__link toc-highlight">Using ROS 2 Command Line Tools</a></li><li><a href="#logging-and-debugging" class="table-of-contents__link toc-highlight">Logging and Debugging</a></li></ul></li><li><a href="#key-concepts" class="table-of-contents__link toc-highlight">Key Concepts</a></li><li><a href="#practical-exercises" class="table-of-contents__link toc-highlight">Practical Exercises</a></li><li><a href="#common-failure-modes" class="table-of-contents__link toc-highlight">Common Failure Modes</a></li><li><a href="#key-concepts-1" class="table-of-contents__link toc-highlight">Key Concepts</a></li><li><a href="#practical-exercises-1" class="table-of-contents__link toc-highlight">Practical Exercises</a></li><li><a href="#common-failure-modes-continued" class="table-of-contents__link toc-highlight">Common Failure Modes (Continued)</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Book</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Introduction</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/module-1-ros2">ROS 2 Module</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/module-2-digital-twin">Digital Twin Module</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/module-3-ai-robot-brain">AI Robot Brain Module</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/module-4-vla">VLA Module</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/capstone">Capstone Project</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Resources</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://docusaurus.io" target="_blank" rel="noopener noreferrer" class="footer__link-item">Docusaurus<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://docs.ros.org/" target="_blank" rel="noopener noreferrer" class="footer__link-item">ROS 2 Documentation<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://developer.nvidia.com/isaac" target="_blank" rel="noopener noreferrer" class="footer__link-item">NVIDIA Isaac<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Farhan899/Ai-Robotics-Book" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 AI Robotics Book Project. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

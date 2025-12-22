@@ -1,0 +1,24 @@
+{
+  "id": "module-1-ros2/hands-on",
+  "title": "Hands-On: ROS 2 Nodes, Topics, Services, and Actions",
+  "description": "Exercise 1: Creating Your First ROS 2 Node",
+  "source": "@site/docs/module-1-ros2/hands-on.md",
+  "sourceDirName": "module-1-ros2",
+  "slug": "/module-1-ros2/hands-on",
+  "permalink": "/docs/module-1-ros2/hands-on",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/module-1-ros2/hands-on.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ROS 2 Architecture and DDS Middleware",
+    "permalink": "/docs/module-1-ros2/architecture"
+  },
+  "next": {
+    "title": "Code Examples: ROS 2 with rclpy and URDF",
+    "permalink": "/docs/module-1-ros2/code-examples"
+  }
+}

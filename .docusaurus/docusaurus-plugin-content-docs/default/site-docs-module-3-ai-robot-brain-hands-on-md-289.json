@@ -1,0 +1,24 @@
+{
+  "id": "module-3-ai-robot-brain/hands-on",
+  "title": "Hands-On: NVIDIA Isaac AI Perception and Training",
+  "description": "Exercise 1: Setting Up Isaac Sim Environment",
+  "source": "@site/docs/module-3-ai-robot-brain/hands-on.md",
+  "sourceDirName": "module-3-ai-robot-brain",
+  "slug": "/module-3-ai-robot-brain/hands-on",
+  "permalink": "/docs/module-3-ai-robot-brain/hands-on",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/module-3-ai-robot-brain/hands-on.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "NVIDIA Isaac Sim Architecture",
+    "permalink": "/docs/module-3-ai-robot-brain/architecture"
+  },
+  "next": {
+    "title": "Code Examples: Isaac ROS Pipelines and AI Perception",
+    "permalink": "/docs/module-3-ai-robot-brain/code-examples"
+  }
+}

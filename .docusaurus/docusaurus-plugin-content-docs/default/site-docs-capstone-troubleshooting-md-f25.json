@@ -1,0 +1,23 @@
+{
+  "id": "capstone/troubleshooting",
+  "title": "Capstone Troubleshooting: Complex Integration Troubleshooting",
+  "description": "Overview",
+  "source": "@site/docs/capstone/troubleshooting.md",
+  "sourceDirName": "capstone",
+  "slug": "/capstone/troubleshooting",
+  "permalink": "/docs/capstone/troubleshooting",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/capstone/troubleshooting.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Capstone Code Examples: Complete Integration Code",
+    "permalink": "/docs/capstone/code-examples"
+  }
+}

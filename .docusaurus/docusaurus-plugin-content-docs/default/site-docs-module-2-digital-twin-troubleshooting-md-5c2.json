@@ -1,0 +1,24 @@
+{
+  "id": "module-2-digital-twin/troubleshooting",
+  "title": "Troubleshooting: Digital Twin and Simulation Common Issues",
+  "description": "Gazebo Installation and Setup Issues",
+  "source": "@site/docs/module-2-digital-twin/troubleshooting.md",
+  "sourceDirName": "module-2-digital-twin",
+  "slug": "/module-2-digital-twin/troubleshooting",
+  "permalink": "/docs/module-2-digital-twin/troubleshooting",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/module-2-digital-twin/troubleshooting.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Code Examples: Sensor Data Streaming and Simulation",
+    "permalink": "/docs/module-2-digital-twin/code-examples"
+  },
+  "next": {
+    "title": "Module 3: The AI-Robot Brain (NVIDIA Isaac™)",
+    "permalink": "/docs/module-3-ai-robot-brain/"
+  }
+}

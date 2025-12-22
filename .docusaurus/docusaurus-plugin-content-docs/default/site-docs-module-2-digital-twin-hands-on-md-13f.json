@@ -1,0 +1,24 @@
+{
+  "id": "module-2-digital-twin/hands-on",
+  "title": "Hands-On: Digital Twin with Gazebo and Sensor Simulation",
+  "description": "Exercise 1: Setting Up Gazebo with ROS 2",
+  "source": "@site/docs/module-2-digital-twin/hands-on.md",
+  "sourceDirName": "module-2-digital-twin",
+  "slug": "/module-2-digital-twin/hands-on",
+  "permalink": "/docs/module-2-digital-twin/hands-on",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/module-2-digital-twin/hands-on.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Gazebo Physics Engines and Simulation Concepts",
+    "permalink": "/docs/module-2-digital-twin/architecture"
+  },
+  "next": {
+    "title": "Code Examples: Sensor Data Streaming and Simulation",
+    "permalink": "/docs/module-2-digital-twin/code-examples"
+  }
+}

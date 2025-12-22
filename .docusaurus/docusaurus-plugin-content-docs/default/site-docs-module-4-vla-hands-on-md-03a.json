@@ -1,0 +1,24 @@
+{
+  "id": "module-4-vla/hands-on",
+  "title": "Hands-On: Vision-Language-Action Implementation",
+  "description": "Exercise 1: Setting Up Voice Command Ingestion System",
+  "source": "@site/docs/module-4-vla/hands-on.md",
+  "sourceDirName": "module-4-vla",
+  "slug": "/module-4-vla/hands-on",
+  "permalink": "/docs/module-4-vla/hands-on",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/module-4-vla/hands-on.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Vision-Language-Action (VLA) Architecture",
+    "permalink": "/docs/module-4-vla/architecture"
+  },
+  "next": {
+    "title": "Code Examples: LLM Integration and ROS 2 Action Mapping",
+    "permalink": "/docs/module-4-vla/code-examples"
+  }
+}

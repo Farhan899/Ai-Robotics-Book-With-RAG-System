@@ -1,0 +1,27 @@
+{
+  "id": "capstone/hands-on",
+  "title": "Capstone Hands-On: Building the Autonomous Humanoid",
+  "description": "Overview",
+  "source": "@site/docs/capstone/hands-on.md",
+  "sourceDirName": "capstone",
+  "slug": "/capstone/hands-on",
+  "permalink": "/docs/capstone/hands-on",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/capstone/hands-on.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Capstone Architecture: Full System Architecture Diagram",
+    "permalink": "/docs/capstone/architecture"
+  },
+  "next": {
+    "title": "Capstone Code Examples: Complete Integration Code",
+    "permalink": "/docs/capstone/code-examples"
+  }
+}

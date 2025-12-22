@@ -1,0 +1,24 @@
+{
+  "id": "module-3-ai-robot-brain/troubleshooting",
+  "title": "Troubleshooting: AI Perception and Isaac Common Issues",
+  "description": "Isaac Sim Installation and Setup Issues",
+  "source": "@site/docs/module-3-ai-robot-brain/troubleshooting.md",
+  "sourceDirName": "module-3-ai-robot-brain",
+  "slug": "/module-3-ai-robot-brain/troubleshooting",
+  "permalink": "/docs/module-3-ai-robot-brain/troubleshooting",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/module-3-ai-robot-brain/troubleshooting.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Code Examples: Isaac ROS Pipelines and AI Perception",
+    "permalink": "/docs/module-3-ai-robot-brain/code-examples"
+  },
+  "next": {
+    "title": "Module 4: Vision-Language-Action (VLA)",
+    "permalink": "/docs/module-4-vla/"
+  }
+}

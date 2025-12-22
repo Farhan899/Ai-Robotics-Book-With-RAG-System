@@ -1,0 +1,27 @@
+{
+  "id": "capstone/code-examples",
+  "title": "Capstone Code Examples: Complete Integration Code",
+  "description": "Overview",
+  "source": "@site/docs/capstone/code-examples.md",
+  "sourceDirName": "capstone",
+  "slug": "/capstone/code-examples",
+  "permalink": "/docs/capstone/code-examples",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/capstone/code-examples.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Capstone Hands-On: Building the Autonomous Humanoid",
+    "permalink": "/docs/capstone/hands-on"
+  },
+  "next": {
+    "title": "Capstone Troubleshooting: Complex Integration Troubleshooting",
+    "permalink": "/docs/capstone/troubleshooting"
+  }
+}

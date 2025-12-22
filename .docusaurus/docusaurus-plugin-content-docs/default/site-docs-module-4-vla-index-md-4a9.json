@@ -1,0 +1,27 @@
+{
+  "id": "module-4-vla/index",
+  "title": "Module 4: Vision-Language-Action (VLA)",
+  "description": "Overview",
+  "source": "@site/docs/module-4-vla/index.md",
+  "sourceDirName": "module-4-vla",
+  "slug": "/module-4-vla/",
+  "permalink": "/docs/module-4-vla/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/module-4-vla/index.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Troubleshooting: AI Perception and Isaac Common Issues",
+    "permalink": "/docs/module-3-ai-robot-brain/troubleshooting"
+  },
+  "next": {
+    "title": "Vision-Language-Action (VLA) Architecture",
+    "permalink": "/docs/module-4-vla/architecture"
+  }
+}

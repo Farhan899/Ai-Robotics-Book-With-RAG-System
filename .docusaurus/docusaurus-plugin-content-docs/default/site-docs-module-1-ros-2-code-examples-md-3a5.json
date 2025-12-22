@@ -1,0 +1,24 @@
+{
+  "id": "module-1-ros2/code-examples",
+  "title": "Code Examples: ROS 2 with rclpy and URDF",
+  "description": "Python Node Examples with rclpy",
+  "source": "@site/docs/module-1-ros2/code-examples.md",
+  "sourceDirName": "module-1-ros2",
+  "slug": "/module-1-ros2/code-examples",
+  "permalink": "/docs/module-1-ros2/code-examples",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/module-1-ros2/code-examples.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Hands-On: ROS 2 Nodes, Topics, Services, and Actions",
+    "permalink": "/docs/module-1-ros2/hands-on"
+  },
+  "next": {
+    "title": "Troubleshooting: ROS 2 Common Issues",
+    "permalink": "/docs/module-1-ros2/troubleshooting"
+  }
+}

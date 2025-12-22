@@ -1,0 +1,24 @@
+{
+  "id": "capstone/architecture",
+  "title": "Capstone Architecture: Full System Architecture Diagram",
+  "description": "System Architecture Overview",
+  "source": "@site/docs/capstone/architecture.md",
+  "sourceDirName": "capstone",
+  "slug": "/capstone/architecture",
+  "permalink": "/docs/capstone/architecture",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/capstone/architecture.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Capstone Project: The Autonomous Humanoid",
+    "permalink": "/docs/capstone/"
+  },
+  "next": {
+    "title": "Capstone Hands-On: Building the Autonomous Humanoid",
+    "permalink": "/docs/capstone/hands-on"
+  }
+}

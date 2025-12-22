@@ -1,0 +1,24 @@
+{
+  "id": "module-1-ros2/troubleshooting",
+  "title": "Troubleshooting: ROS 2 Common Issues",
+  "description": "Common Installation and Setup Issues",
+  "source": "@site/docs/module-1-ros2/troubleshooting.md",
+  "sourceDirName": "module-1-ros2",
+  "slug": "/module-1-ros2/troubleshooting",
+  "permalink": "/docs/module-1-ros2/troubleshooting",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/module-1-ros2/troubleshooting.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Code Examples: ROS 2 with rclpy and URDF",
+    "permalink": "/docs/module-1-ros2/code-examples"
+  },
+  "next": {
+    "title": "Module 2: The Digital Twin (Gazebo & Unity)",
+    "permalink": "/docs/module-2-digital-twin/"
+  }
+}

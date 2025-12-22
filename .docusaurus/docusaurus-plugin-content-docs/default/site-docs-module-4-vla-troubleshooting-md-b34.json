@@ -1,0 +1,24 @@
+{
+  "id": "module-4-vla/troubleshooting",
+  "title": "Troubleshooting: Vision-Language-Action Integration Issues",
+  "description": "LLM Integration Issues",
+  "source": "@site/docs/module-4-vla/troubleshooting.md",
+  "sourceDirName": "module-4-vla",
+  "slug": "/module-4-vla/troubleshooting",
+  "permalink": "/docs/module-4-vla/troubleshooting",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/module-4-vla/troubleshooting.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Code Examples: LLM Integration and ROS 2 Action Mapping",
+    "permalink": "/docs/module-4-vla/code-examples"
+  },
+  "next": {
+    "title": "Capstone Project: The Autonomous Humanoid",
+    "permalink": "/docs/capstone/"
+  }
+}

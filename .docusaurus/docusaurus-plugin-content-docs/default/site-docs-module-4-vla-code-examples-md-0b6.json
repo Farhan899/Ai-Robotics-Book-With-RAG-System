@@ -1,0 +1,24 @@
+{
+  "id": "module-4-vla/code-examples",
+  "title": "Code Examples: LLM Integration and ROS 2 Action Mapping",
+  "description": "Large Language Model Integration",
+  "source": "@site/docs/module-4-vla/code-examples.md",
+  "sourceDirName": "module-4-vla",
+  "slug": "/module-4-vla/code-examples",
+  "permalink": "/docs/module-4-vla/code-examples",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/module-4-vla/code-examples.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Hands-On: Vision-Language-Action Implementation",
+    "permalink": "/docs/module-4-vla/hands-on"
+  },
+  "next": {
+    "title": "Troubleshooting: Vision-Language-Action Integration Issues",
+    "permalink": "/docs/module-4-vla/troubleshooting"
+  }
+}

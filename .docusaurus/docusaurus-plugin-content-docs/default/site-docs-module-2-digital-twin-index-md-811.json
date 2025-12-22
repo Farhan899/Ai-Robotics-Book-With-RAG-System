@@ -1,0 +1,27 @@
+{
+  "id": "module-2-digital-twin/index",
+  "title": "Module 2: The Digital Twin (Gazebo & Unity)",
+  "description": "Overview",
+  "source": "@site/docs/module-2-digital-twin/index.md",
+  "sourceDirName": "module-2-digital-twin",
+  "slug": "/module-2-digital-twin/",
+  "permalink": "/docs/module-2-digital-twin/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/module-2-digital-twin/index.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Troubleshooting: ROS 2 Common Issues",
+    "permalink": "/docs/module-1-ros2/troubleshooting"
+  },
+  "next": {
+    "title": "Gazebo Physics Engines and Simulation Concepts",
+    "permalink": "/docs/module-2-digital-twin/architecture"
+  }
+}

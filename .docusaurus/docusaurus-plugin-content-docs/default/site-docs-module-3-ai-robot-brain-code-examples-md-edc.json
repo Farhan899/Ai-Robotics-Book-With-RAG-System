@@ -1,0 +1,24 @@
+{
+  "id": "module-3-ai-robot-brain/code-examples",
+  "title": "Code Examples: Isaac ROS Pipelines and AI Perception",
+  "description": "Isaac ROS VSLAM Pipeline",
+  "source": "@site/docs/module-3-ai-robot-brain/code-examples.md",
+  "sourceDirName": "module-3-ai-robot-brain",
+  "slug": "/module-3-ai-robot-brain/code-examples",
+  "permalink": "/docs/module-3-ai-robot-brain/code-examples",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/module-3-ai-robot-brain/code-examples.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Hands-On: NVIDIA Isaac AI Perception and Training",
+    "permalink": "/docs/module-3-ai-robot-brain/hands-on"
+  },
+  "next": {
+    "title": "Troubleshooting: AI Perception and Isaac Common Issues",
+    "permalink": "/docs/module-3-ai-robot-brain/troubleshooting"
+  }
+}

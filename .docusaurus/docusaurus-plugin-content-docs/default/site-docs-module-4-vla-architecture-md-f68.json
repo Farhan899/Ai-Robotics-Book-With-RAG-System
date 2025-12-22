@@ -1,0 +1,24 @@
+{
+  "id": "module-4-vla/architecture",
+  "title": "Vision-Language-Action (VLA) Architecture",
+  "description": "Introduction to VLA Architecture",
+  "source": "@site/docs/module-4-vla/architecture.md",
+  "sourceDirName": "module-4-vla",
+  "slug": "/module-4-vla/architecture",
+  "permalink": "/docs/module-4-vla/architecture",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/module-4-vla/architecture.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 4: Vision-Language-Action (VLA)",
+    "permalink": "/docs/module-4-vla/"
+  },
+  "next": {
+    "title": "Hands-On: Vision-Language-Action Implementation",
+    "permalink": "/docs/module-4-vla/hands-on"
+  }
+}

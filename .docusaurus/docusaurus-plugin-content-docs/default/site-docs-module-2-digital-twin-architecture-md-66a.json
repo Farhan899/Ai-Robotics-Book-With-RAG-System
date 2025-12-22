@@ -1,0 +1,24 @@
+{
+  "id": "module-2-digital-twin/architecture",
+  "title": "Gazebo Physics Engines and Simulation Concepts",
+  "description": "Introduction to Gazebo Architecture",
+  "source": "@site/docs/module-2-digital-twin/architecture.md",
+  "sourceDirName": "module-2-digital-twin",
+  "slug": "/module-2-digital-twin/architecture",
+  "permalink": "/docs/module-2-digital-twin/architecture",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/module-2-digital-twin/architecture.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 2: The Digital Twin (Gazebo & Unity)",
+    "permalink": "/docs/module-2-digital-twin/"
+  },
+  "next": {
+    "title": "Hands-On: Digital Twin with Gazebo and Sensor Simulation",
+    "permalink": "/docs/module-2-digital-twin/hands-on"
+  }
+}

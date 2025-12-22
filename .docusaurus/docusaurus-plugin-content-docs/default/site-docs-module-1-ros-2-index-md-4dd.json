@@ -1,0 +1,27 @@
+{
+  "id": "module-1-ros2/index",
+  "title": "Module 1: The Robotic Nervous System (ROS 2)",
+  "description": "Overview",
+  "source": "@site/docs/module-1-ros2/index.md",
+  "sourceDirName": "module-1-ros2",
+  "slug": "/module-1-ros2/",
+  "permalink": "/docs/module-1-ros2/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/module-1-ros2/index.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction to AI/Spec-Driven Humanoid Robotics",
+    "permalink": "/docs/intro"
+  },
+  "next": {
+    "title": "ROS 2 Architecture and DDS Middleware",
+    "permalink": "/docs/module-1-ros2/architecture"
+  }
+}
