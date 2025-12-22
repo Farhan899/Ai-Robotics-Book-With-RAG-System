@@ -6,7 +6,7 @@
 export default {
   "title": "AI / Spec-Driven Humanoid Robotics",
   "tagline": "From Middleware to Vision-Language-Action",
-  "favicon": "img/favicon.ico",
+  "favicon": "img/docusaurus.png",
   "customFields": {
     "description": "A modular, simulation-first guide to building autonomous humanoid systems."
   },
@@ -69,7 +69,7 @@ export default {
       "title": "AI / Spec-Driven Humanoid Robotics",
       "logo": {
         "alt": "AI Robotics Book Logo",
-        "src": "img/logo.svg"
+        "src": "img/docusaurus.png"
       },
       "items": [
         {
