@@ -26,7 +26,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Farhan899', // Usually your GitHub org/user name.
-  projectName: 'Ai-Robotics-Book', // Usually your repo name.
+  projectName: 'Ai-Robotics-Book-With-RAG-System', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -47,7 +47,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Farhan899/Ai-Robotics-Book/edit/main/',
+            'https://github.com/Farhan899/Ai-Robotics-Book-With-RAG-System/edit/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -76,7 +76,7 @@ const config: Config = {
           label: 'Book',
         },
         {
-          href: 'https://github.com/Farhan899/Ai-Robotics-Book',
+          href: 'https://github.com/Farhan899/Ai-Robotics-Book-With-RAG-System',
           label: 'GitHub',
           position: 'right',
         },
@@ -136,7 +136,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/Farhan899/Ai-Robotics-Book',
+              href: 'https://github.com/Farhan899/Ai-Robotics-Book-With-RAG-System',
             },
           ],
         },
