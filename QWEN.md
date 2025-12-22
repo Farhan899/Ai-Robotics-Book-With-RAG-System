@@ -208,3 +208,10 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+## Active Technologies
+- Python 3.11 + OpenAI SDK, FastAPI, Qdrant client library, OpenRouter API (001-rag-chatbot)
+- Qdrant vector database for robotics content, with potential local caching (001-rag-chatbot)
+
+## Recent Changes
+- 001-rag-chatbot: Added Python 3.11 + OpenAI SDK, FastAPI, Qdrant client library, OpenRouter API

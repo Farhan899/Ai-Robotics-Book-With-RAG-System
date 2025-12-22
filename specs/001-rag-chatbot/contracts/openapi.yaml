@@ -1,0 +1,206 @@
+openapi: 3.0.0
+info:
+  title: RAG Chatbot for Robotics Book API
+  description: API for a Retrieval-Augmented Generation chatbot that answers questions about robotics content from a book
+  version: 1.0.0
+servers:
+  - url: https://api.rag-chatbot.example.com
+    description: Production server
+  - url: https://staging-api.rag-chatbot.example.com
+    description: Staging server
+
+paths:
+  /chat:
+    post:
+      summary: Submit a query to the RAG chatbot
+      description: Processes a user query and returns an AI-generated response based on robotics book content
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/QueryRequest'
+      responses:
+        '200':
+          description: Successful response from the chatbot
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChatResponse'
+        '400':
+          description: Bad request due to invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      security:
+        - api_key: []
+
+  /chat/text-analysis:
+    post:
+      summary: Analyze user-provided text
+      description: Analyzes specific text provided by the user without querying the database
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TextAnalysisRequest'
+      responses:
+        '200':
+          description: Analysis of the provided text
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChatResponse'
+        '400':
+          description: Bad request due to invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      security:
+        - api_key: []
+
+  /health:
+    get:
+      summary: Health check endpoint
+      description: Returns the health status of the API
+      responses:
+        '200':
+          description: API is healthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthResponse'
+
+components:
+  schemas:
+    QueryRequest:
+      type: object
+      required:
+        - query
+      properties:
+        query:
+          type: string
+          description: The question or query from the user
+          example: "Explain how robot kinematics work"
+          minLength: 1
+          maxLength: 2000
+        selected_text:
+          type: string
+          description: Optional specific text from the book for focused analysis
+          example: "Robot kinematics is the study of motion in robotic systems..."
+          maxLength: 5000
+
+    TextAnalysisRequest:
+      type: object
+      required:
+        - text
+      properties:
+        text:
+          type: string
+          description: The text to analyze
+          example: "Robot kinematics is the study of motion in robotic systems..."
+          minLength: 1
+          maxLength: 5000
+        query:
+          type: string
+          description: Optional specific question about the provided text
+          example: "What does this text explain about forward kinematics?"
+
+    ChatResponse:
+      type: object
+      required:
+        - id
+        - content
+        - response_type
+        - timestamp
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the response
+          example: "resp_1234567890"
+        content:
+          type: string
+          description: The AI-generated response content
+          example: "Robot kinematics is the study of motion in robotic systems..."
+        citations:
+          type: array
+          description: List of sources cited in the response
+          items:
+            type: string
+          example: ["Book Section: Chapter 3 - Kinematics", "Book Section: Section 3.2 - Forward Kinematics"]
+        response_type:
+          type: string
+          description: Type of response generated
+          enum: [from_book, fallback_general, fallback_unavailable]
+          example: "from_book"
+        timestamp:
+          type: string
+          format: date-time
+          description: When the response was generated
+          example: "2023-10-20T10:00:00Z"
+
+    ErrorResponse:
+      type: object
+      required:
+        - error
+        - message
+      properties:
+        error:
+          type: string
+          description: Error code
+          example: "QUERY_TOO_LONG"
+        message:
+          type: string
+          description: Human-readable error message
+          example: "Query exceeds maximum length of 2000 characters"
+
+    HealthResponse:
+      type: object
+      required:
+        - status
+        - timestamp
+      properties:
+        status:
+          type: string
+          description: Health status of the system
+          enum: [healthy, degraded, unavailable]
+          example: "healthy"
+        timestamp:
+          type: string
+          format: date-time
+          description: When the health check was performed
+          example: "2023-10-20T10:00:00Z"
+        details:
+          type: object
+          description: Additional health details, including external service status
+          properties:
+            qdrant_status:
+              type: string
+              enum: [connected, disconnected]
+              example: "connected"
+            llm_api_status:
+              type: string
+              enum: [connected, disconnected]
+              example: "connected"
+
+  securitySchemes:
+    api_key:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: API key for authentication

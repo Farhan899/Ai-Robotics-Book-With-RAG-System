@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Troubleshooting: Vision-Language-Action Integration Issues | AI / Spec-Driven Humanoid Robotics</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://your-robotics-book.example.com/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://your-robotics-book.example.com/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://your-robotics-book.example.com/docs/module-4-vla/troubleshooting"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Troubleshooting: Vision-Language-Action Integration Issues | AI / Spec-Driven Humanoid Robotics"><meta data-rh="true" name="description" content="LLM Integration Issues"><meta data-rh="true" property="og:description" content="LLM Integration Issues"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-robotics-book.example.com/docs/module-4-vla/troubleshooting"><link data-rh="true" rel="alternate" href="https://your-robotics-book.example.com/docs/module-4-vla/troubleshooting" hreflang="en"><link data-rh="true" rel="alternate" href="https://your-robotics-book.example.com/docs/module-4-vla/troubleshooting" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Troubleshooting: Vision-Language-Action Integration Issues","item":"https://your-robotics-book.example.com/docs/module-4-vla/troubleshooting"}]}</script><link rel="stylesheet" href="/assets/css/styles.efeec1c5.css">
-<script src="/assets/js/runtime~main.5cc68559.js" defer="defer"></script>
-<script src="/assets/js/main.c417a746.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.0a216cd7.js" defer="defer"></script>
+<script src="/assets/js/main.1e23080a.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -368,6 +368,230 @@
 <li class=""><strong>Safety Violations</strong>: Commands executed without proper validation</li>
 <li class=""><strong>State Inconsistency</strong>: Components operating with outdated or conflicting information</li>
 <li class=""><strong>Error Propagation</strong>: Errors in one component affecting others in the pipeline</li>
-</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/module-4-vla/troubleshooting.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/module-4-vla/code-examples"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Code Examples: LLM Integration and ROS 2 Action Mapping</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/capstone/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Capstone Project: The Autonomous Humanoid</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#llm-integration-issues" class="table-of-contents__link toc-highlight">LLM Integration Issues</a><ul><li><a href="#openai-api-connection-problems" class="table-of-contents__link toc-highlight">OpenAI API Connection Problems</a></li><li><a href="#llm-response-parsing-failures" class="table-of-contents__link toc-highlight">LLM Response Parsing Failures</a></li><li><a href="#llm-rate-limiting" class="table-of-contents__link toc-highlight">LLM Rate Limiting</a></li></ul></li><li><a href="#audio-and-speech-recognition-issues" class="table-of-contents__link toc-highlight">Audio and Speech Recognition Issues</a><ul><li><a href="#microphone-setup-problems" class="table-of-contents__link toc-highlight">Microphone Setup Problems</a></li><li><a href="#speech-recognition-accuracy-issues" class="table-of-contents__link toc-highlight">Speech Recognition Accuracy Issues</a></li><li><a href="#whisper-model-loading-issues" class="table-of-contents__link toc-highlight">Whisper Model Loading Issues</a></li></ul></li><li><a href="#vision-language-integration-issues" class="table-of-contents__link toc-highlight">Vision-Language Integration Issues</a><ul><li><a href="#camera-feed-problems" class="table-of-contents__link toc-highlight">Camera Feed Problems</a></li><li><a href="#vision-grounded-llm-failures" class="table-of-contents__link toc-highlight">Vision-Grounded LLM Failures</a></li><li><a href="#image-encoding-issues" class="table-of-contents__link toc-highlight">Image Encoding Issues</a></li></ul></li><li><a href="#ros-2-integration-issues" class="table-of-contents__link toc-highlight">ROS 2 Integration Issues</a><ul><li><a href="#topic-connection-problems" class="table-of-contents__link toc-highlight">Topic Connection Problems</a></li><li><a href="#action-server-connection-issues" class="table-of-contents__link toc-highlight">Action Server Connection Issues</a></li><li><a href="#tf-transform-problems" class="table-of-contents__link toc-highlight">TF Transform Problems</a></li></ul></li><li><a href="#performance-optimization-issues" class="table-of-contents__link toc-highlight">Performance Optimization Issues</a><ul><li><a href="#latency-problems" class="table-of-contents__link toc-highlight">Latency Problems</a></li><li><a href="#memory-consumption-issues" class="table-of-contents__link toc-highlight">Memory Consumption Issues</a></li><li><a href="#computational-bottleneck" class="table-of-contents__link toc-highlight">Computational Bottleneck</a></li></ul></li><li><a href="#safety-and-reliability-issues" class="table-of-contents__link toc-highlight">Safety and Reliability Issues</a><ul><li><a href="#command-validation-failures" class="table-of-contents__link toc-highlight">Command Validation Failures</a></li><li><a href="#error-recovery-problems" class="table-of-contents__link toc-highlight">Error Recovery Problems</a></li></ul></li><li><a href="#network-and-distributed-computing-issues" class="table-of-contents__link toc-highlight">Network and Distributed Computing Issues</a><ul><li><a href="#api-connectivity-problems" class="table-of-contents__link toc-highlight">API Connectivity Problems</a></li><li><a href="#multi-node-synchronization" class="table-of-contents__link toc-highlight">Multi-Node Synchronization</a></li></ul></li><li><a href="#debugging-strategies" class="table-of-contents__link toc-highlight">Debugging Strategies</a><ul><li><a href="#vla-system-debugging" class="table-of-contents__link toc-highlight">VLA System Debugging</a></li><li><a href="#logging-and-diagnostics" class="table-of-contents__link toc-highlight">Logging and Diagnostics</a></li><li><a href="#visualization-tools" class="table-of-contents__link toc-highlight">Visualization Tools</a></li></ul></li><li><a href="#common-configuration-issues" class="table-of-contents__link toc-highlight">Common Configuration Issues</a><ul><li><a href="#message-type-mismatches" class="table-of-contents__link toc-highlight">Message Type Mismatches</a></li><li><a href="#parameter-configuration-problems" class="table-of-contents__link toc-highlight">Parameter Configuration Problems</a></li></ul></li><li><a href="#key-concepts" class="table-of-contents__link toc-highlight">Key Concepts</a></li><li><a href="#practical-exercises" class="table-of-contents__link toc-highlight">Practical Exercises</a></li><li><a href="#common-failure-modes" class="table-of-contents__link toc-highlight">Common Failure Modes</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Book</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Introduction</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/module-1-ros2">ROS 2 Module</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/module-2-digital-twin">Digital Twin Module</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/module-3-ai-robot-brain">AI Robot Brain Module</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/module-4-vla">VLA Module</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/capstone">Capstone Project</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Resources</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://docusaurus.io" target="_blank" rel="noopener noreferrer" class="footer__link-item">Docusaurus<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://docs.ros.org/" target="_blank" rel="noopener noreferrer" class="footer__link-item">ROS 2 Documentation<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://developer.nvidia.com/isaac" target="_blank" rel="noopener noreferrer" class="footer__link-item">NVIDIA Isaac<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Farhan899/Ai-Robotics-Book" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 AI Robotics Book Project. Built with Docusaurus.</div></div></div></footer></div>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/Farhan899/Ai-Robotics-Book/edit/main/docs/module-4-vla/troubleshooting.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/module-4-vla/code-examples"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Code Examples: LLM Integration and ROS 2 Action Mapping</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/capstone/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Capstone Project: The Autonomous Humanoid</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#llm-integration-issues" class="table-of-contents__link toc-highlight">LLM Integration Issues</a><ul><li><a href="#openai-api-connection-problems" class="table-of-contents__link toc-highlight">OpenAI API Connection Problems</a></li><li><a href="#llm-response-parsing-failures" class="table-of-contents__link toc-highlight">LLM Response Parsing Failures</a></li><li><a href="#llm-rate-limiting" class="table-of-contents__link toc-highlight">LLM Rate Limiting</a></li></ul></li><li><a href="#audio-and-speech-recognition-issues" class="table-of-contents__link toc-highlight">Audio and Speech Recognition Issues</a><ul><li><a href="#microphone-setup-problems" class="table-of-contents__link toc-highlight">Microphone Setup Problems</a></li><li><a href="#speech-recognition-accuracy-issues" class="table-of-contents__link toc-highlight">Speech Recognition Accuracy Issues</a></li><li><a href="#whisper-model-loading-issues" class="table-of-contents__link toc-highlight">Whisper Model Loading Issues</a></li></ul></li><li><a href="#vision-language-integration-issues" class="table-of-contents__link toc-highlight">Vision-Language Integration Issues</a><ul><li><a href="#camera-feed-problems" class="table-of-contents__link toc-highlight">Camera Feed Problems</a></li><li><a href="#vision-grounded-llm-failures" class="table-of-contents__link toc-highlight">Vision-Grounded LLM Failures</a></li><li><a href="#image-encoding-issues" class="table-of-contents__link toc-highlight">Image Encoding Issues</a></li></ul></li><li><a href="#ros-2-integration-issues" class="table-of-contents__link toc-highlight">ROS 2 Integration Issues</a><ul><li><a href="#topic-connection-problems" class="table-of-contents__link toc-highlight">Topic Connection Problems</a></li><li><a href="#action-server-connection-issues" class="table-of-contents__link toc-highlight">Action Server Connection Issues</a></li><li><a href="#tf-transform-problems" class="table-of-contents__link toc-highlight">TF Transform Problems</a></li></ul></li><li><a href="#performance-optimization-issues" class="table-of-contents__link toc-highlight">Performance Optimization Issues</a><ul><li><a href="#latency-problems" class="table-of-contents__link toc-highlight">Latency Problems</a></li><li><a href="#memory-consumption-issues" class="table-of-contents__link toc-highlight">Memory Consumption Issues</a></li><li><a href="#computational-bottleneck" class="table-of-contents__link toc-highlight">Computational Bottleneck</a></li></ul></li><li><a href="#safety-and-reliability-issues" class="table-of-contents__link toc-highlight">Safety and Reliability Issues</a><ul><li><a href="#command-validation-failures" class="table-of-contents__link toc-highlight">Command Validation Failures</a></li><li><a href="#error-recovery-problems" class="table-of-contents__link toc-highlight">Error Recovery Problems</a></li></ul></li><li><a href="#network-and-distributed-computing-issues" class="table-of-contents__link toc-highlight">Network and Distributed Computing Issues</a><ul><li><a href="#api-connectivity-problems" class="table-of-contents__link toc-highlight">API Connectivity Problems</a></li><li><a href="#multi-node-synchronization" class="table-of-contents__link toc-highlight">Multi-Node Synchronization</a></li></ul></li><li><a href="#debugging-strategies" class="table-of-contents__link toc-highlight">Debugging Strategies</a><ul><li><a href="#vla-system-debugging" class="table-of-contents__link toc-highlight">VLA System Debugging</a></li><li><a href="#logging-and-diagnostics" class="table-of-contents__link toc-highlight">Logging and Diagnostics</a></li><li><a href="#visualization-tools" class="table-of-contents__link toc-highlight">Visualization Tools</a></li></ul></li><li><a href="#common-configuration-issues" class="table-of-contents__link toc-highlight">Common Configuration Issues</a><ul><li><a href="#message-type-mismatches" class="table-of-contents__link toc-highlight">Message Type Mismatches</a></li><li><a href="#parameter-configuration-problems" class="table-of-contents__link toc-highlight">Parameter Configuration Problems</a></li></ul></li><li><a href="#key-concepts" class="table-of-contents__link toc-highlight">Key Concepts</a></li><li><a href="#practical-exercises" class="table-of-contents__link toc-highlight">Practical Exercises</a></li><li><a href="#common-failure-modes" class="table-of-contents__link toc-highlight">Common Failure Modes</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Book</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Introduction</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/module-1-ros2">ROS 2 Module</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/module-2-digital-twin">Digital Twin Module</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/module-3-ai-robot-brain">AI Robot Brain Module</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/module-4-vla">VLA Module</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/capstone">Capstone Project</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Resources</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://docusaurus.io" target="_blank" rel="noopener noreferrer" class="footer__link-item">Docusaurus<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://docs.ros.org/" target="_blank" rel="noopener noreferrer" class="footer__link-item">ROS 2 Documentation<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://developer.nvidia.com/isaac" target="_blank" rel="noopener noreferrer" class="footer__link-item">NVIDIA Isaac<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Farhan899/Ai-Robotics-Book" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 AI Robotics Book Project. Built with Docusaurus.</div></div></div></footer><div class="chat-widget"><button class="chat-toggle-button chat-toggle-button-light">💬</button><style>
+        .chat-widget {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          z-index: 1000;
+        }
+
+        .chat-toggle-button {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          border: none;
+          color: white;
+          font-size: 24px;
+          cursor: pointer;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .chat-toggle-button-light {
+          background-color: #4f8bf9;
+        }
+
+        .chat-toggle-button-dark {
+          background-color: #2c6eaf;
+        }
+
+        .chat-window {
+          width: 350px;
+          height: 500px;
+          max-width: 90vw;
+          max-height: 70vh;
+          display: flex;
+          flex-direction: column;
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          margin-bottom: 15px;
+        }
+
+        .chat-window-light {
+          background-color: #ffffff;
+          border: 1px solid #e0e0e0;
+        }
+
+        .chat-window-dark {
+          background-color: #242526;
+          border: 1px solid #444950;
+        }
+
+        .chat-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 15px;
+        }
+
+        .chat-header-light {
+          background-color: #f5f6f7;
+          border-bottom: 1px solid #e0e0e0;
+        }
+
+        .chat-header-dark {
+          background-color: #3a3b3c;
+          border-bottom: 1px solid #444950;
+        }
+
+        .chat-title {
+          font-weight: bold;
+          font-size: 16px;
+        }
+
+        .chat-close {
+          background: none;
+          border: none;
+          font-size: 24px;
+          cursor: pointer;
+          color: inherit;
+          padding: 0;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .chat-messages {
+          flex: 1;
+          overflow-y: auto;
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .message {
+          max-width: 80%;
+          padding: 10px 12px;
+          border-radius: 18px;
+          position: relative;
+        }
+
+        .message-user-light {
+          background-color: #4f8bf9;
+          color: white;
+          align-self: flex-end;
+        }
+
+        .message-user-dark {
+          background-color: #0d78ea;
+          color: white;
+          align-self: flex-end;
+        }
+
+        .message-bot-light {
+          background-color: #f0f2f5;
+          color: #333;
+          align-self: flex-start;
+        }
+
+        .message-bot-dark {
+          background-color: #3a3b3c;
+          color: #e4e6eb;
+          align-self: flex-start;
+        }
+
+        .typing-indicator {
+          display: flex;
+          align-items: center;
+          padding: 5px 0;
+        }
+
+        .typing-indicator span {
+          height: 8px;
+          width: 8px;
+          background-color: #999;
+          border-radius: 50%;
+          display: inline-block;
+          margin: 0 2px;
+          animation: typing 1.4s infinite ease-in-out;
+        }
+
+        .typing-indicator span:nth-child(1) {
+          animation-delay: -0.32s;
+        }
+
+        .typing-indicator span:nth-child(2) {
+          animation-delay: -0.16s;
+        }
+
+        @keyframes typing {
+          0%, 80%, 100% {
+            transform: scale(0.8);
+            opacity: 0.5;
+          }
+          40% {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+
+        .chat-input-area {
+          display: flex;
+          padding: 10px;
+          border-top: 1px solid;
+        }
+
+        .chat-input-area-light {
+          border-top-color: #e0e0e0;
+          background-color: #ffffff;
+        }
+
+        .chat-input-area-dark {
+          border-top-color: #444950;
+          background-color: #242526;
+        }
+
+        .chat-input {
+          flex: 1;
+          border: 1px solid;
+          border-radius: 18px;
+          padding: 10px 15px;
+          resize: none;
+          max-height: 100px;
+          margin-right: 10px;
+          outline: none;
+        }
+
+        .chat-input-light {
+          background-color: #fff;
+          border-color: #e0e0e0;
+          color: #333;
+        }
+
+        .chat-input-dark {
+          background-color: #3a3b3c;
+          border-color: #444950;
+          color: #e4e6eb;
+        }
+
+        .chat-send-button {
+          border: none;
+          border-radius: 18px;
+          padding: 10px 15px;
+          background-color: #4f8bf9;
+          color: white;
+          cursor: pointer;
+          align-self: flex-end;
+        }
+
+        .chat-send-button:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+
+        @media (max-width: 480px) {
+          .chat-window {
+            width: 95vw;
+            height: 70vh;
+          }
+        }
+      </style></div></div>
 </body>
 </html>

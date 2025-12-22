@@ -34,7 +34,7 @@ export default {
   "url": "https://your-robotics-book.example.com",
   "baseUrl": "/",
   "organizationName": "Farhan899",
-  "projectName": "Ai-Robotics-Book",
+  "projectName": "Ai-Robotics-Book-With-RAG-System",
   "onBrokenLinks": "throw",
   "i18n": {
     "defaultLocale": "en",
@@ -50,7 +50,7 @@ export default {
       {
         "docs": {
           "sidebarPath": "./sidebars.ts",
-          "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book/edit/main/"
+          "editUrl": "https://github.com/Farhan899/Ai-Robotics-Book-With-RAG-System/edit/main/"
         },
         "theme": {
           "customCss": "./src/css/custom.css"
@@ -79,7 +79,7 @@ export default {
           "label": "Book"
         },
         {
-          "href": "https://github.com/Farhan899/Ai-Robotics-Book",
+          "href": "https://github.com/Farhan899/Ai-Robotics-Book-With-RAG-System",
           "label": "GitHub",
           "position": "right"
         }
@@ -140,7 +140,7 @@ export default {
           "items": [
             {
               "label": "GitHub",
-              "href": "https://github.com/Farhan899/Ai-Robotics-Book"
+              "href": "https://github.com/Farhan899/Ai-Robotics-Book-With-RAG-System"
             }
           ]
         }

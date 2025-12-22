@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "context7": {
+      "httpUrl": "https://mcp.context7.com/mcp",
+      "headers": {}
+    }
+  },
+  "$version": 2
+}
