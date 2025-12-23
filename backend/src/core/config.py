@@ -28,6 +28,7 @@ class Settings(BaseSettings):
     
     # Performance settings
     response_timeout_seconds: int = 5
+    qdrant_timeout_seconds: int = 30  # Increased timeout for vector database operations
     
     # Site settings for OpenRouter API
     site_url: str = "https://yourdomain.com"

@@ -39,18 +39,19 @@ const ChatWidget = () => {
     setIsOpen(!isOpen);
   };
 
-  // Function to send message to AI backend (now using the proxy server)
+  // Function to send message to AI backend
   const sendToAI = async (message: string) => {
     try {
-      // Connect to the backend API server (which now proxies to RAG backend)
-      const response = await fetch('http://localhost:5001/api/chat', {
+      // Connect to the backend API server (using relative path to avoid CORS issues)
+      // The backend proxy server will forward to the RAG backend
+      const response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          message,
-          context: 'AI Robotics Book' // Additional context about the domain
+          message,  // Node.js proxy expects 'message' field
+          context: 'AI Robotics Book'
         }),
       });
 
@@ -58,11 +59,18 @@ const ChatWidget = () => {
         const data = await response.json();
         return data.reply || 'I received your message and processed it.';
       } else {
+        // Log specific error for debugging
+        console.error(`API call failed with status: ${response.status} ${response.statusText}`);
+        const errorText = await response.text();
+        console.error('Error response body:', errorText);
+
         // Fallback response if API call fails
         return 'I\'m having trouble connecting to the AI service right now. Could you try again?';
       }
     } catch (error) {
-      console.error('Error communicating with AI service:', error);
+      // Log the specific network or fetch error
+      console.error('Network or fetch error:', error);
+
       // Return a relevant response based on common robotics topics
       return getRelevantResponse(message);
     }

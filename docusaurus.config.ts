@@ -38,6 +38,29 @@ const config: Config = {
     locales: ['en'],
   },
 
+  plugins: [
+    // Add webpack proxy for development
+    async function proxyPlugin(context, options) {
+      return {
+        name: 'webpack-proxy-plugin',
+        configureWebpack(config, isServer, utils) {
+          // Add proxy configuration for development
+          config.devServer = config.devServer || {};
+          config.devServer.proxy = {
+            '/api': {
+              target: 'http://localhost:5001', // Proxy through the Node.js server
+              changeOrigin: true,
+              pathRewrite: {
+                '^/api': '/api', // Keep the same path structure
+              },
+            },
+          };
+          return config;
+        },
+      };
+    },
+  ],
+
   presets: [
     [
       'classic',
