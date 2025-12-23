@@ -41,10 +41,16 @@ const ChatWidget = () => {
 
   // Function to send message to AI backend
   const sendToAI = async (message: string) => {
+    // Use relative path for development and production
+    // In production, the web server should proxy /api requests to the backend
+    const apiEndpoint = '/api/chat';
+
     try {
-      // Connect to the backend API server (using relative path to avoid CORS issues)
-      // The backend proxy server will forward to the RAG backend
-      const response = await fetch('/api/chat', {
+      // Connect to the backend API server with a timeout
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
+
+      const response = await fetch(apiEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -53,7 +59,10 @@ const ChatWidget = () => {
           message,  // Node.js proxy expects 'message' field
           context: 'AI Robotics Book'
         }),
+        signal: controller.signal
       });
+
+      clearTimeout(timeoutId);
 
       if (response.ok) {
         const data = await response.json();
@@ -68,10 +77,17 @@ const ChatWidget = () => {
         return 'I\'m having trouble connecting to the AI service right now. Could you try again?';
       }
     } catch (error) {
+      // Check if the error is due to timeout
+      if (error.name === 'AbortError') {
+        console.error('Request timeout: The API call took too long to respond');
+        return 'The AI service is taking too long to respond. Please try again.';
+      }
+
       // Log the specific network or fetch error
       console.error('Network or fetch error:', error);
 
-      // Return a relevant response based on common robotics topics
+      // In case of network error, return a relevant response based on common robotics topics
+      // This ensures users get helpful information even when the backend is not available
       return getRelevantResponse(message);
     }
   };

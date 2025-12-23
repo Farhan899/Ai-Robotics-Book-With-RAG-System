@@ -48,7 +48,7 @@ const config: Config = {
           config.devServer = config.devServer || {};
           config.devServer.proxy = {
             '/api': {
-              target: 'http://localhost:5001', // Proxy through the Node.js server
+              target: process.env.BACKEND_API_URL || 'http://localhost:5001', // Proxy through the Node.js server
               changeOrigin: true,
               pathRewrite: {
                 '^/api': '/api', // Keep the same path structure
